@@ -4,7 +4,7 @@ The VendNing Machine Robot, commonly referred to as "(NAME OF THING)" is an auto
 
 ## Packages
 
-Run ```pip install --requirements.txt``` to install all packages utilized.
+Run ```pip install -r requirements.txt``` to install all packages utilized.
 
 Rest TBD
 
