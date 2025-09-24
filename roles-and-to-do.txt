@@ -1,3 +1,19 @@
 Designated positions:
 
-Application - Full-stack for w
+Application - Full-stack application designated for easier setup of machines.
+- Name 1
+- Name 2
+
+Robotics & Movement - Mainly focussed on hardware & working with servos + other physical aspects
+- Name 1
+- Name 2
+
+Pathfinding - Backend mainly based off Matthew's AI module(s) that he's used in other projects.
+- Name 1
+- Name 2
+
+Vending Machine - The actual machine itslelf.
+- Name 1
+- Name 2
+
+Other miscelanious roles (IE system for speech synthesis) can be taken on overtime, but it's important to get the primary positions settled in first.
