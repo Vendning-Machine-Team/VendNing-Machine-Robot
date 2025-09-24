@@ -11,3 +11,7 @@ Rest TBD
 ## Parts used
 
 TBD
+
+## Languages
+
+Python (Backend)
