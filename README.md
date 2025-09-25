@@ -6,6 +6,7 @@ The VendNing Machine Robot, commonly referred to as "(NAME OF THING)" is an auto
 
 Run ```pip install -r requirements.txt``` to install all packages utilized.
 
+- OpenCV
 Rest TBD
 
 ## Parts used
