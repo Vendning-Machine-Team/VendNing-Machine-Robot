@@ -17,5 +17,3 @@ Vending Machine - The actual machine itslelf.
 - Name 2
 
 Other miscelanious roles (IE system for speech synthesis) can be taken on overtime, but it's important to get the primary positions settled in first.
-
-This line is being pushed in order to inititalize .Gitignore
