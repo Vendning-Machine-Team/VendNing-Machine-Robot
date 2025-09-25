@@ -1,12 +1,13 @@
 Designated positions:
 
 Application - Full-stack application designated for easier setup of machines.
-- Name 1
-- Name 2
+- Travis
+- Tri
 
 Robotics & Movement - Mainly focussed on hardware & working with servos + other physical aspects
-- Name 1
-- Name 2
+- Josh
+- Travis
+- Matthew
 
 Pathfinding - Backend mainly based off Matthew's AI module(s) that he's used in other projects.
 - Name 1
