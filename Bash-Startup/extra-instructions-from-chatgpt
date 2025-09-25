@@ -1,0 +1,42 @@
+Step 2: Create a systemd service
+
+Make a service file so systemd manages it:
+
+sudo nano /etc/systemd/system/main.service
+
+
+Paste this inside:
+
+[Unit]
+Description=Run main.py on boot
+After=network.target
+
+[Service]
+ExecStart=/home/pi/start_main.sh
+WorkingDirectory=/home/pi
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
+
+
+Save & exit.
+
+Step 3: Enable and start the service
+sudo systemctl daemon-reload
+sudo systemctl enable main.service
+sudo systemctl start main.service
+
+Step 4: Check if it works
+systemctl status main.service
+
+
+If you reboot:
+
+sudo reboot
+
+
+Your main.py will auto-run at startup 🚀
