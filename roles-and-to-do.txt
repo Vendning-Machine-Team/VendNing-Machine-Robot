@@ -14,7 +14,7 @@ Pathfinding - Backend mainly based off Matthew's AI module(s) that he's used in 
 - Name 2
 
 Vending Machine - The actual machine itslelf.
-- Name 1
-- Name 2
+- Anthony
+- Victoria
 
 Other miscelanious roles (IE system for speech synthesis) can be taken on overtime, but it's important to get the primary positions settled in first.
