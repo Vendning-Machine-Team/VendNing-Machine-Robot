@@ -1,10 +1,11 @@
 Designated positions:
 
-Application - Full-stack application designated for easier setup of machines.
+Web Dev - Full-stack application designated for easier setup of machines.
 NOTE: Miscenelanious at the moment, focus on important core concepts first.
 - Travis
 - Tri
 - Samantha
+- Adeyemi
 
 Robotics & Movement - Mainly focussed on hardware & working with servos + other physical aspects
 - Josh
@@ -16,7 +17,7 @@ Pathfinding - Backend mainly based off Matthew's AI module(s) that he's used in 
 - Cayden
 - Samuel
 
-Vending Machine - The actual machine itslelf.
+Vending Machinew (Chasis/Electrical) - The actual machine itslelf.
 - Anthony
 - Victoria
 
