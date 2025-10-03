@@ -19,5 +19,3 @@ def SEND_AUDIT_LOG(message,urgency): # Urgency can be "True" or "False", true fo
         response.raise_for_status()
     except requests.RequestException as e:
         print(f"Error sending webhook: {e}")
-
-SEND_AUDIT_LOG("Test message #2 -samuel", False)
