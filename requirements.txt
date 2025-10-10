@@ -1,1 +1,1 @@
-opencv-python, python-dotenv
+opencv-python, python-dotenv, flask, node, react
