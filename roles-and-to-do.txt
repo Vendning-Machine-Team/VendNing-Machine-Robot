@@ -10,7 +10,7 @@ Robotics & Movement - Mainly focussed on hardware & working with servos + other 
 - Matthew
 
 Pathfinding - Backend mainly based off Matthew's AI module(s) that he's used in other projects.
-- Name 1
+- Cayden
 - Name 2
 
 Vending Machine - The actual machine itslelf.
