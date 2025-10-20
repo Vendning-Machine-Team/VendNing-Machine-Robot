@@ -3,3 +3,5 @@ CAMERA_C = {
     "IMAGE_HEIGHT": 1080,
     "FPS": 30,
 }
+
+PATHFINDING_MODEL_PATH = "yolov8n.pt"
