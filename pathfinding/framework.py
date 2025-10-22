@@ -1,3 +1,6 @@
+# This file is used for testing and not part of the main project.
+
+
 import cv2 as cv
 import config
 from ultralytics import YOLO as yol
