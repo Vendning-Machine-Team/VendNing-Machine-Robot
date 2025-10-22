@@ -1,0 +1,11 @@
+
+#pay {
+    background-color: #4CAF50;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: white;
+}
+#report {
+    background-color: #f44336;
+    color: white;
+}
+

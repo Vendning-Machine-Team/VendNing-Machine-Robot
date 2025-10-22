@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay For Snacks</title>
+    <link rel="stylesheet" href="Payment_calculation_style.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="Payment_calculation_app.js" defer></script>
+</head>
+<body>
+    <h1>Pay For Snacks</h1>
+    <p>Price per snack: <strong id = "price">$10</strong></p>
+
+    <label for="snackCount">Number of snacks:</label>
+    <input type="number" id="snackCount" min="1" value="1" oninput="calculateTotal()">
+
+    <p>Total cost: <strong id="total">$10</strong></p>
+
+    <button id="pay">Pay Now</button>
+    <button id="report">Report Issue</button>
+
+
+</body>
+</html>

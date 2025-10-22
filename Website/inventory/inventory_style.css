@@ -1,0 +1,22 @@
+/* ===== Inventory Page Styles ===== */
+input:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+/* Confirm button */
+#comfirm {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Home button */
+#home {
+    background-color: #2196F3;
+    color: white;
+}
+/* Total display */
+#total {
+    font-size: 20px;
+    font-weight: bold;
+}

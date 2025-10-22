@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+    <link rel="stylesheet" href="inventory_style.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="inventory_app.js" defer></script>
+</head>
+<body>
+    <h1>Inventory</h1>
+    <p>Current Inventory: <strong id="current_Inventory">10</strong></p>
+    <p>Current Price: <strong id="current_Price">10</strong></p>
+
+    <label for="inventory_count">Set/Change:</label>
+    <input type="number" id="inventory_count" min="1" value="10" oninput="calculateTotal()"><br><br>
+   
+    <label for="product_price">price:</label>
+    <input type="number" id="product_price" min="1" value="10" oninput="calculateTotal()"><br><br>
+    
+    <p>Total Inventory: <strong id="total">$100</strong></p>
+
+    <button id="comfirm" onclick="updateInventory()">Confirm</button>
+    <button id="home">Home</button>
+
+
+</body>
+</html>
