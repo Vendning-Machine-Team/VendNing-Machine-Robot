@@ -1,1 +1,1 @@
-opencv-python, python-dotenv, flask, node, react
+opencv-python, python-dotenv, flask, node, react, ultralytics
