@@ -1,8 +1,10 @@
 Designated positions:
 
-Application - Full-stack application designated for easier setup of machines.
+Full Stack - React for frontend, TBD backend
 - Travis
 - Tri
+- Samantha
+- Adeyemi
 
 Robotics & Movement - Mainly focussed on hardware & working with servos + other physical aspects
 - Josh
@@ -11,10 +13,12 @@ Robotics & Movement - Mainly focussed on hardware & working with servos + other 
 
 Pathfinding - Backend mainly based off Matthew's AI module(s) that he's used in other projects.
 - Cayden
-- Name 2
+- Samuel
 
-Vending Machine - The actual machine itslelf.
-- Name 1
-- Name 2
+Vending Machinew (Chasis/Electrical) - The actual machine itslelf.
+- Anthony
+- Victoria
 
 Other miscelanious roles (IE system for speech synthesis) can be taken on overtime, but it's important to get the primary positions settled in first.
+I love Samuel
+This is just testing

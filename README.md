@@ -16,3 +16,5 @@ TBD
 ## Languages
 
 Python (Backend)
+
+Bash (RaspberryPi Startup)
