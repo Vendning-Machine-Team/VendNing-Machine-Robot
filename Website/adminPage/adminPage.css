@@ -1,10 +1,5 @@
-button {
-    background-color: #2197F3;
+#logOutButton {
+    background-color: #4CAF50;
     color: white;
 }
 
-body{
-    text-align: center;
-    background-color: white;
-    font-family:Arial, Helvetica, sans-serif
-}
