@@ -4,12 +4,12 @@ const viewAuditButton = document.getElementById('viewAuditButton');
 const logOutButton = document.getElementById('logOutButton');
 
 setPathButton.addEventListener('click', () => {
-    // TODO: Add logic for setting path
+    window.location.replace("../setPath/setPath.html");
     console.log('Set Path button clicked');
 });
 
 setInventoryButton.addEventListener('click', () => {
-    window.location.replace("../inventory/inventory.html");
+    window.location.replace("../inventory/Inventory.html");
     console.log('Set Inventory button clicked');
 });
 
