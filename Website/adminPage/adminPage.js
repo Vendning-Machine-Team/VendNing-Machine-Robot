@@ -9,7 +9,7 @@ setPathButton.addEventListener('click', () => {
 });
 
 setInventoryButton.addEventListener('click', () => {
-    // TODO: Add logic for setting inventory
+    window.location.replace("../inventory/inventory.html");
     console.log('Set Inventory button clicked');
 });
 

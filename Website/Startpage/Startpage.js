@@ -6,7 +6,7 @@ adminLoginButton.addEventListener("click", () => {
 })
 
 payButton.addEventListener("click", () => {
-    window.location.replace("../Payment/Payment_calculation.html");
+    window.location.replace("../Price/Payment_calculation.html");
 })
 
 // Button functionallity for Snack page added here
