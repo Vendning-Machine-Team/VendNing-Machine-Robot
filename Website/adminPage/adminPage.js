@@ -19,6 +19,6 @@ viewAuditButton.addEventListener('click', () => {
 });
 
 logOutButton.addEventListener('click', () => {
-    // TODO: Add logout logic
+    window.location.replace("../Startpage/Startpage.html");
     console.log('Log Out button clicked');
 });
