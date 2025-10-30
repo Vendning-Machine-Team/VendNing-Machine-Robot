@@ -4,7 +4,7 @@ CAMERA_C = {
     "FPS": 30,
 }
 
-PATHFINDING_MODEL_PATH = "YOLOv8n.pt"
+PATHFINDING_MODEL_PATH = "~/YOLOv8n.pt"
 
 # Use a local video file as the source
 VIDEO_SOURCE = "path/to/your/video.mp4"
