@@ -1,1 +1,10 @@
-opencv-python, python-dotenv, flask, node, react, ultralytics
+opencv-python
+python-dotenv
+Flask
+ultralytics
+react
+node
+# Notes:
+# - 'node' and 'react' are not Python packages and were removed.
+# - Pin versions if you need reproducible installs, for example:
+#   Flask==2.3.2
