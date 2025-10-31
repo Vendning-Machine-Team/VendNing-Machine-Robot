@@ -1,3 +1,4 @@
+//Blank for now
 const adminLoginButton = document.querySelector("#admin-login");
 const payButton = document.querySelector("#pay-service");
 
