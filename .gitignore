@@ -11,6 +11,8 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+*.MOV
+
 node_modules
 dist
 dist-ssr
