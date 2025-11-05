@@ -13,5 +13,16 @@
     <button id="admin-login">Admin Login</button><br>
     <button id="pay-service">Pay for Snack</button>
   </div>
+
+  <script>
+    // Easily change robot's name here:
+    const robotName = "Munchin"; 
+    document.getElementById("robot-name").textContent = `Name of Robot: ${robotName}`;
+
+    // Example actions for buttons
+    document.getElementById("admin-login").onclick = () => alert(`${robotName} Admin Login`);
+    document.getElementById("pay-service").onclick = () => alert(`Proceed to payment on ${robotName}`);
+  </script>
+
 </body>
 </html>

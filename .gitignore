@@ -16,8 +16,6 @@ dist
 dist-ssr
 *.local
 
-*.mp4
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
