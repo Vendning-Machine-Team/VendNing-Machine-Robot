@@ -3,6 +3,13 @@ import config
 from ultralytics import YOLO as yol
 from typing import List, Dict, Optional, Union
 
+import sys
+import os
+parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+if parent_dir not in sys.path: sys.path.append(parent_dir)
+
+import webhook_output
+
 thresholds = config.DISTANCE_THRESHOLD
 width_threshold = thresholds["WIDTH"]
 height_threshold = thresholds["HEIGHT"]
@@ -58,14 +65,17 @@ class DetectionFramework:
                     centers.append((center_x, center_y))
 
                     cv.rectangle(annotated_frame, (int(x1), int(y1)), (int(x2), int(y2)), (255, 0, 0), 2)
-
+                    
+                    logddddddd = True
                     for i in range(len(centers)):
                         for j in range(i + 1, len(centers)):
                             dist_x = abs(centers[i][0] - centers[j][0]) / config.CAMERA_C["IMAGE_WIDTH"]
                             dist_y = abs(centers[i][1] - centers[j][1]) / config.CAMERA_C["IMAGE_HEIGHT"]
 
                             if dist_x < width_threshold and dist_y < height_threshold:
-                                print("Objects too close!")
+                                if logddddddd:
+                                    logddddddd = False
+                                    webhook_output.SEND_AUDIT_LOG("Temporary testing log, only sending one because i dont want discord ratelimiting us", True)
                 
             if cv.waitKey(1) & 0xFF == ord("q"):
                 break
