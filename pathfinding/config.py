@@ -7,14 +7,14 @@ CAMERA_C = {
 }
 
 DISTANCE_THRESHOLD = {
-    "WIDTH": SIZE_THRESHOLD/CAMERA_C.IMAGE_WIDTH, # 1.524 meters is 5 feet in pixels, divided by width of the camera, which gives an estimation for how wide, or "close" objects are. 
-    "HEIGHT": SIZE_THRESHOLD/CAMERA_C.IMAGE_HEIGHT,
+    "WIDTH": SIZE_THRESHOLD/CAMERA_C["IMAGE_WIDTH"], # 1.524 meters is 5 feet in pixels, divided by width of the camera, which gives an estimation for how wide, or "close" objects are.
+    "HEIGHT": SIZE_THRESHOLD/CAMERA_C["IMAGE_HEIGHT"],
 }
 
-PATHFINDING_MODEL_PATH = "pathfinding\YOLOv8n.pt"
+PATHFINDING_MODEL_PATH = "pathfinding/YOLOv8n.pt"
 
 # Use a local video file as the source
-VIDEO_SOURCE = f"C:\\Users\\srsay\\Downloads\\VendingMachine\\VendNing-Machine-Robot\\pathfinding\\2053100-uhd_3840_2160_30fps.mp4"
+VIDEO_SOURCE = f"/Users/cayden/Downloads/file.MOV"
 
 # Or, use IP camera streams
 # IP_STREAMS = ["http://your.camera.ip:port/video"]
