@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const submitButton = document.getElementById("submitButton");
     const issueTextArea = document.getElementById("issue");
-    const homeButton = document.getElementById("home button");
+    const homeButton = document.getElementById("homebutton");
 
     submitButton.addEventListener("click", (event) => {
         event.preventDefault(); // Prevent page reload
@@ -21,5 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     homeButton.addEventListener("click", () => {
         //TODO: allow for going to the home page
         //window.location.href = "home.html"; // Change to your actual home page
+        window.location.replace("../Startpage/Startpage.html");
     });
 });
