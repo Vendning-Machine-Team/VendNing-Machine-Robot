@@ -3,6 +3,10 @@ import config
 from ultralytics import YOLO as yol
 from typing import List, Dict, Optional, Union
 
+thresholds = config.DISTANCE_THRESHOLD
+width_threshold = thresholds["WIDTH"]
+height_threshold = thresholds["HEIGHT"]
+
 class DetectionFramework:
     def __init__(self) -> None:
         self.model_path: Optional[str] = getattr(config, "PATHFINDING_MODEL_PATH", None)
@@ -43,7 +47,26 @@ class DetectionFramework:
                 annotated_frame = results[0].plot()
 
                 cv.imshow(f"Source: {source}", annotated_frame)
+                
+                boxesCoords = results[0].boxes.xyxy.cpu().numpy()
 
+                centers = []
+                for box in boxesCoords:
+                    x1, y1, x2, y2 = box
+                    center_x = int((x1 + x2) / 2)
+                    center_y = int((y1 + y2) / 2)
+                    centers.append((center_x, center_y))
+
+                    cv.rectangle(annotated_frame, (int(x1), int(y1)), (int(x2), int(y2)), (255, 0, 0), 2)
+
+                    for i in range(len(centers)):
+                        for j in range(i + 1, len(centers)):
+                            dist_x = abs(centers[i][0] - centers[j][0]) / config.CAMERA_C["IMAGE_WIDTH"]
+                            dist_y = abs(centers[i][1] - centers[j][1]) / config.CAMERA_C["IMAGE_HEIGHT"]
+
+                            if dist_x < width_threshold and dist_y < height_threshold:
+                                print("Objects too close!")
+                
             if cv.waitKey(1) & 0xFF == ord("q"):
                 break
 
