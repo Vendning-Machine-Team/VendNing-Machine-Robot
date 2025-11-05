@@ -17,8 +17,9 @@ class DetectionFramework:
         if not self.video_source:
             raise ValueError("VIDEO_SOURCE or IP_STREAMS is not defined in config.py")
 
-        self.model: yol = yol(self.model_path)
+        self.model: yol = yol(self.model_path, verbose=False)
         self.captures: Dict[str, cv.VideoCapture] = self._init_captures()
+        self.objects_close: bool = False
 
     def _init_captures(self) -> Dict[str, cv.VideoCapture]:
         captures: Dict[str, cv.VideoCapture] = {}
@@ -59,13 +60,23 @@ class DetectionFramework:
 
                     cv.rectangle(annotated_frame, (int(x1), int(y1)), (int(x2), int(y2)), (255, 0, 0), 2)
 
-                    for i in range(len(centers)):
-                        for j in range(i + 1, len(centers)):
-                            dist_x = abs(centers[i][0] - centers[j][0]) / config.CAMERA_C["IMAGE_WIDTH"]
-                            dist_y = abs(centers[i][1] - centers[j][1]) / config.CAMERA_C["IMAGE_HEIGHT"]
+                proximity_detected = False
+                for i in range(len(centers)):
+                    for j in range(i + 1, len(centers)):
+                        dist_x = abs(centers[i][0] - centers[j][0]) / config.CAMERA_C["IMAGE_WIDTH"]
+                        dist_y = abs(centers[i][1] - centers[j][1]) / config.CAMERA_C["IMAGE_HEIGHT"]
 
-                            if dist_x < width_threshold and dist_y < height_threshold:
+                        if dist_x < width_threshold and dist_y < height_threshold:
+                            proximity_detected = True
+                            if not self.objects_close:
                                 print("Objects too close!")
+                                self.objects_close = True
+                            break
+                    if proximity_detected:
+                        break
+
+                if not proximity_detected and self.objects_close:
+                    self.objects_close = False
                 
             if cv.waitKey(1) & 0xFF == ord("q"):
                 break
