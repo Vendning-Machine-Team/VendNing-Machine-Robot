@@ -14,7 +14,7 @@ DISTANCE_THRESHOLD = {
 PATHFINDING_MODEL_PATH = "pathfinding/YOLOv8n.pt"
 
 # Use a local video file as the source
-VIDEO_SOURCE = f"/Users/cayden/Downloads/file.MOV"
+VIDEO_SOURCE = f"C:\\Users\\srsay\\Downloads\\VendingMachine\\VendNing-Machine-Robot\\pathfinding\\IMG_6127.MOV"
 
 # Or, use IP camera streams
 # IP_STREAMS = ["http://your.camera.ip:port/video"]
