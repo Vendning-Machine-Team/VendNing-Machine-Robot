@@ -1,4 +1,4 @@
-body {
+/* body {
       font-family: Arial, sans-serif;
       background-color: #f5f5f5;
       display: flex;
@@ -13,7 +13,6 @@ body {
       border-radius: 8px;
       padding: 30px 40px;
       width: 300px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       text-align: center;
     }
 
@@ -43,4 +42,4 @@ body {
 
     button:hover {
       background-color: #f2c94c;
-    }
+    } */
