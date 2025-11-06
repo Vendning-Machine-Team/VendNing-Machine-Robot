@@ -1,0 +1,70 @@
+{
+  "logs": [
+    {
+      "timestamp": "2025-11-05T20:27:56.147005",
+      "action": "login_success",
+      "details": "User admin logged in successfully",
+      "user": "admin"
+    },
+    {
+      "timestamp": "2025-11-05T20:28:06.174260",
+      "action": "inventory_add",
+      "details": "Added item: Energy Drink",
+      "user": "admin"
+    },
+    {
+      "timestamp": "2025-11-05T20:28:10.904231",
+      "action": "issue_reported",
+      "details": "New issue reported: Test issue: Machine not dispensing items properly...",
+      "user": "anonymous"
+    },
+    {
+      "timestamp": "2025-11-05T20:28:15.579680",
+      "action": "payment_processed",
+      "details": "Payment of $2.5 for item ID 1",
+      "user": "anonymous"
+    },
+    {
+      "timestamp": "2025-11-05T20:35:55.672335",
+      "action": "login_success",
+      "details": "User admin logged in successfully",
+      "user": "admin"
+    },
+    {
+      "timestamp": "2025-11-05T20:36:00.776184",
+      "action": "login_failed",
+      "details": "Failed login attempt for username: admin",
+      "user": "anonymous"
+    },
+    {
+      "timestamp": "2025-11-05T20:38:09.812488",
+      "action": "login_success",
+      "details": "User admin logged in successfully",
+      "user": "admin"
+    },
+    {
+      "timestamp": "2025-11-05T20:38:19.363526",
+      "action": "login_failed",
+      "details": "Failed login attempt for username: d",
+      "user": "admin"
+    },
+    {
+      "timestamp": "2025-11-05T20:39:28.684806",
+      "action": "login_success",
+      "details": "User admin logged in successfully",
+      "user": "admin"
+    },
+    {
+      "timestamp": "2025-11-05T20:40:53.787098",
+      "action": "login_success",
+      "details": "User admin logged in successfully",
+      "user": "admin"
+    },
+    {
+      "timestamp": "2025-11-05T20:42:09.447864",
+      "action": "login_success",
+      "details": "User admin logged in successfully",
+      "user": "admin"
+    }
+  ]
+}
