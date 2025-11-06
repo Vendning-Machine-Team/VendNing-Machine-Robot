@@ -65,6 +65,12 @@
       "action": "login_success",
       "details": "User admin logged in successfully",
       "user": "admin"
+    },
+    {
+      "timestamp": "2025-11-05T20:53:11.463618",
+      "action": "login_success",
+      "details": "User admin logged in successfully",
+      "user": "admin"
     }
   ]
 }
