@@ -1,4 +1,4 @@
-
+const homeButton = document.querySelector("#home");
 
 function calculateTotal() {
     const count = document.getElementById('inventory_count').value;
@@ -14,3 +14,8 @@ function updateInventory() {
     document.getElementById('current_Price').innerText = price;
     calculateTotal();
 }
+
+homeButton.addEventListener('click', () => {
+    window.location.replace("../adminPage/adminPage.html");
+    console.log('Set Inventory button clicked');
+});
