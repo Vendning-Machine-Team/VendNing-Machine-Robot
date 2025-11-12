@@ -3,7 +3,7 @@ const adminLoginButton = document.querySelector("#admin-login");
 const payButton = document.querySelector("#pay-service");
 
 adminLoginButton.addEventListener("click", () => {
-    window.location.replace("../AdminLogin/AdminLogin.html");
+    window.location.replace("../AdminLogin/Adminlogin.html");
 })
 
 payButton.addEventListener("click", () => {

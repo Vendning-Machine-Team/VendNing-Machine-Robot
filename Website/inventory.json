@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Water Bottle",
+      "price": 2.5,
+      "quantity": 49
+    },
+    {
+      "id": 2,
+      "name": "Soda",
+      "price": 3.0,
+      "quantity": 30
+    },
+    {
+      "id": 3,
+      "name": "Chips",
+      "price": 1.5,
+      "quantity": 40
+    },
+    {
+      "id": 4,
+      "name": "Energy Drink",
+      "price": 4.0,
+      "quantity": 25
+    }
+  ]
+}

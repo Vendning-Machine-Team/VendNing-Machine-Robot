@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Robot Login</title>
+  <link rel="stylesheet" href="../style.css">
   <link href="Startpage.css" rel="stylesheet" />
   <script src="Startpage.js" defer></script>
 </head>
@@ -16,12 +17,8 @@
 
   <script>
     // Easily change robot's name here:
-    const robotName = "Munchin"; 
+    const robotName = "Munchin";
     document.getElementById("robot-name").textContent = `Name of Robot: ${robotName}`;
-
-    // Example actions for buttons
-    document.getElementById("admin-login").onclick = () => alert(`${robotName} Admin Login`);
-    document.getElementById("pay-service").onclick = () => alert(`Proceed to payment on ${robotName}`);
   </script>
 
 </body>

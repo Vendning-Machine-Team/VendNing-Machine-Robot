@@ -24,8 +24,9 @@ class DetectionFramework:
         if not self.video_source:
             raise ValueError("VIDEO_SOURCE or IP_STREAMS is not defined in config.py")
 
-        self.model: yol = yol(self.model_path)
+        self.model: yol = yol(self.model_path, verbose=False)
         self.captures: Dict[str, cv.VideoCapture] = self._init_captures()
+        self.objects_close: bool = False
 
     def _init_captures(self) -> Dict[str, cv.VideoCapture]:
         captures: Dict[str, cv.VideoCapture] = {}
