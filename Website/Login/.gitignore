@@ -25,3 +25,4 @@ dist-ssr
 # Environment files
 **/.env
 .DS_Store
+*.env
