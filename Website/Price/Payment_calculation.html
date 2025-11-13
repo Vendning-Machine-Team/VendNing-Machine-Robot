@@ -9,16 +9,19 @@
     <script src="Payment_calculation_app.js" defer></script>
 </head>
 <body>
-    <h1>Pay For Snacks</h1>
-    <p>Price per snack: <strong id = "price">$10</strong></p>
 
-    <label for="snackCount">Number of snacks:</label>
-    <input type="number" id="snackCount" min="1" value="1" oninput="calculateTotal()">
+    <div class="wrapper">
+        <h1>Pay For Snacks</h1>
+        <p>Price per snack: <strong id = "price">$10</strong></p>
 
-    <p>Total cost: <strong id="total">$10</strong></p>
+        <label for="snackCount">Number of snacks:</label>
+        <input type="number" id="snackCount" min="1" value="1" oninput="calculateTotal()">
 
-    <button id="pay">Pay Now</button>
-    <button id="report">Report Issue</button>
+        <p>Total cost: <strong id="total">$10</strong></p>
+
+        <button id="pay">Pay Now</button>
+        <button id="report">Report Issue</button>
+    </div>
 
 
 </body>
