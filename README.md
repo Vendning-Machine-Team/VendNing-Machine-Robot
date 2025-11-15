@@ -39,4 +39,6 @@ Part	|  *Description*
 
 🐍 Python (Backend)
 
+🎨 CSS & JavaScript (Website frontend)
+
 🐚 Bash (RaspberryPi Startup)
