@@ -1,9 +1,21 @@
 body {
             font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             text-align: center;
-            margin-top: 100px;
             background-color: #FFEECF;
         }
+/* Typical box around the buttons and titles on all the pages */
+.wrapper {
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 30px 40px;      
+    text-align: center;
+}
+
 /* Headings */
 h1 {
     color: #333;
