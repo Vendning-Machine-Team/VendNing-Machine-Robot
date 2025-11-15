@@ -20,12 +20,19 @@ Packages Used:
 🛠️ Rest TBD
 ___
 ### 🔩 Parts Used
+
 Part	Description
+
 🥧 Raspberry Pi 4A	Main onboard computer
+
 📸 Raspberry Pi Camera Module 3	Vision + perception
+
 🧠 Intel Neural Compute Stick 2	Hardware-accelerated AI inference
+
 🔋 7200 mAh Lithium Polymer Battery	Portable power source
+
 🎚️ Mini Maestro 12 Channel USB Servo Controller	Motor/servo control
+
 ⚙️ (MOTORS)	TBD
 
 ### 🧑‍💻 Languages
