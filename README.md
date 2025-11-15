@@ -4,7 +4,7 @@ Autonomous • Mobile Vending Machine • Student Led Project
 
 <p align="center"> <img src="https://img.shields.io/badge/Python-Backend-blue?style=for-the-badge" /> <img src="https://img.shields.io/badge/Raspberry%20Pi-Project-red?style=for-the-badge" /> <img src="https://img.shields.io/badge/UTSA-Student%20Project-orange?style=for-the-badge" /> </p>
 
-The VendNing Machine Robot, commonly referred to as "(NAME OF THING)", is an autonomous, chatty vending machine deployed on the UTSA campus as an extracuricular group project for a collective of students.
+The VendNing Machine Robot, commonly referred to as "Muchin", is an autonomous, chatty vending machine deployed on the UTSA campus as an extracuricular group project for a collective of students.
 It rolls around in public, talks to potential customers, and works as a real vending machine! 🎒🧃🤖
 ___
 ### 📦 Packages
