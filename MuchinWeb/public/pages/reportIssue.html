@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pay For Snacks</title>
+
+  <!-- This was originally payment page, is now the new "start page" -->
+  <link rel="stylesheet" href="/src/style.css">
+
+  <script src="/src/js/reportIssue.js" defer></script>
+</head>
+
+<body class="min-h-screen relative bg-gradient-to-br from-purple-300 to-pink-200 space-y-6">
+    <a
+    href="/src/index.html"
+    class="absolute top-6 right-6 text-sm font-medium text-gray-600 hover:text-gray-900 transition"
+  >
+    Back to Payment
+  </a>
+
+  <div class="min-h-screen flex items-center justify-center">
+    <div class=" space-y-6 bg-white/80 backdrop-blur-xl rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.12)] p-10 w-full max-w-lg">
+
+      <h1 class="text-4xl font-semibold text-gray-900 tracking-tight text-center">
+        Report an Issue
+      </h1>
+
+      <p class="text-sm text-gray-500 text-center mt-2">
+        Please let us know what issue you encountered so we can fix it!
+      </p>
+      <form class="space-y-6">
+        <textarea id="issue" name="issue" rows="5" cols="60" placeholder="Enter your message here..." 
+        class="w-full px-5 py-4 rounded-2xl border border-gray-200 text-center text-xl focus:ring-2 focus:ring-purple-400 outline-none transition"></textarea>
+
+        <button id="submitButton" class="w-full bg-red-400 hover:bg-red-500 text-white py-4 rounded-2xl font-semibold transition shadow-md">Submit</button>
+        </form>
+
+
+      </div>
+    </div>
+
+ 
+
+</body>
+</html>
