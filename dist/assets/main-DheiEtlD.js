@@ -1,0 +1,1 @@
+import"./style-CUByFO4V.js";const t=document.getElementById("payButton"),e=document.getElementById("reportButton");e.addEventListener("click",()=>{window.location.replace("./pages/reportIssue.html")});t.addEventListener("click",()=>{window.location.replace("./pages/paymentCode.html")});

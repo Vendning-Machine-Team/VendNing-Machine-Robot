@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pay For Snacks</title>
+
+  <!-- This was originally payment page, is now the new "start page" -->
+
+  <script type="module" crossorigin src="./assets/main-DheiEtlD.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/style-CUByFO4V.js">
+  <link rel="stylesheet" crossorigin href="./assets/style-sKypfw1D.css">
+</head>
+
+<body class="min-h-screen relative bg-gradient-to-br from-purple-300 to-pink-200">
+    <a
+    href="./pages/adminLogin.html"
+    class="absolute top-6 right-6 text-sm font-medium text-gray-600 hover:text-gray-900 transition"
+  >
+    Admin Login
+  </a>
+
+  <div class="min-h-screen flex items-center justify-center">
+    <div class="bg-white/80 backdrop-blur-xl rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.12)] p-10 w-full max-w-lg">
+
+      <h1 class="text-4xl font-semibold text-gray-900 tracking-tight text-center">
+        Pay for Snacks
+      </h1>
+
+      <p class="text-sm text-gray-500 text-center mt-2">
+        Simple checkout · $10 per snack
+      </p>
+
+      <label class="block text-xs uppercase tracking-wide text-gray-500 mt-8 mb-2">
+        Quantity
+      </label>
+
+      <input
+        type="number"
+        value="1"
+        min="1"
+        id="snackCount"
+        oninput="calculateTotal()"
+        class="w-full px-5 py-4 rounded-2xl border border-gray-200 text-center text-xl focus:ring-2 focus:ring-purple-400 outline-none transition"
+      />
+
+      <div class="mt-8 text-center">
+        <p class="text-xs uppercase tracking-wide text-gray-500">
+          Total
+        </p>
+        <p id="total" class="text-4xl font-bold text-gray-900 mt-1">
+          $10
+        </p>
+      </div>
+
+      <div class="mt-10 space-y-2">
+        <button id="payButton" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white py-4 rounded-2xl font-semibold transition shadow-md">
+          Pay Now
+        </button>
+        
+        <button id="reportButton" class="w-full bg-red-400 hover:bg-red-500 text-white py-4 rounded-2xl font-semibold transition shadow-md">
+          Report an issue
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
