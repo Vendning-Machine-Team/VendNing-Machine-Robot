@@ -10,10 +10,10 @@ function calculateTotal() {
 }
 
 reportButton.addEventListener("click", () => {
-    window.location.replace("pages/reportIssue.html");
+    window.location.replace("./pages/reportIssue.html");
 });
 
 payButton.addEventListener("click", () => {
-    window.location.replace("pages/paymentCode.html");
+    window.location.replace("./pages/paymentCode.html");
 });
 

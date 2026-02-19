@@ -22,6 +22,6 @@ confirmButton.addEventListener('click', () => {
 });
 
 homeButton.addEventListener('click', () => {
-    window.location.replace("pages/adminDashboard.html");
+    window.location.replace("./adminDashboard.html");
     console.log('Home button clicked');
 });

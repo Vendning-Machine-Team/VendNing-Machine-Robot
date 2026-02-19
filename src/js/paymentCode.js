@@ -6,5 +6,5 @@ homeButton.addEventListener("click", () => {
 });
 
 reportButton.addEventListener("click", () => {
-    window.location.replace("pages/reportIssue.html");
+    window.location.replace("./reportIssue.html");
 });

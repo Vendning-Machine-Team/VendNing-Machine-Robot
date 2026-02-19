@@ -25,7 +25,7 @@ form.addEventListener("submit", (event) => {
     enteredPassword === ADMIN_PASSWORD
   ) {
     // Successful logi
-    window.location.href = "pages/adminDashboard.html";
+    window.location.href = "./adminDashboard.html";
   } else {
     // Show error
     errorMessage.classList.remove("hidden");
