@@ -21,6 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     homeButton.addEventListener("click", () => {
         //TODO: allow for going to the home page
         //window.location.href = "home.html"; // Change to your actual home page
-        window.location.replace("../Startpage/Startpage.html");
+        window.location.replace("../index.html");
     });
 });
