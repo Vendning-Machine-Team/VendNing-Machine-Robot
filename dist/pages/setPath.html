@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Set Path </title>
+
+  <script type="module" crossorigin src="../assets/setPath-CTt7FyR7.js"></script>
+  <link rel="modulepreload" crossorigin href="../assets/style-CUByFO4V.js">
+  <link rel="stylesheet" crossorigin href="../assets/style-sKypfw1D.css">
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-300 to-sky-200">
+    
+<!--this is the box with everything-->
+    <div class="bg-white/80 backdrop-blur-xl rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.12)] p-10 w-full max-w-lg">
+      
+      <h1 class="text-4xl font-semibold text-gray-900 tracking-tight text-center">
+        Set Path
+      </h1>
+
+      <p class="text-sm text-gray-500 text-center mt-2">
+        Please provide an x and y value for how far the robot's boundaries are (in feet)<!--THIS IS A HARD CODED VALUE RIHGT NOW-->
+      </p>
+
+      <label class="block text-l uppercase tracking-wide text-gray-700 mt-8 mb-2">
+        X:
+      </label>
+      <input
+        type="number"
+        value="10"
+        min="1"
+        id="x"
+        class="w-full px-5 py-4 rounded-2xl border border-gray-200 text-center text-xl focus:ring-2 focus:ring-purple-400 outline-none transition"
+      />
+
+      <label class="block text-l uppercase tracking-wide text-gray-700 mt-8 mb-2">
+        Y:
+      </label>
+      <input
+        type="number"
+        value="10"
+        min="1"
+        id="y"
+        class="w-full px-5 py-4 rounded-2xl border border-gray-200 text-center text-xl focus:ring-2 focus:ring-purple-400 outline-none transition"
+      />
+
+      <div class="mt-6 flex gap-4">
+        <button id="confirmButton" class="flex-1 bg-emerald-400 hover:bg-emerald-500 text-white py-4 rounded-2xl font-semibold transition">
+            Confirm
+        </button>
+
+        <button id="homeButton" class="flex-1 bg-indigo-400 hover:bg-indigo-500 text-white py-4 rounded-2xl font-semibold transition">
+            Home
+        </button>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
