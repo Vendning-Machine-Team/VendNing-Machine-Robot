@@ -1,23 +1,25 @@
 const confirmButton = document.getElementById('confirmButton');
 const homeButton = document.getElementById('homeButton');
+const inventoryCount = document.getElementById('inventory_count');
+const productPrice = document.getElementById('product_price');
 
 function calculateTotal() {
-    const count = document.getElementById('inventory_count').value;
-    const price = document.getElementById('product_price').value;
+    const count = inventoryCount.value;
+    const price = productPrice.value;
     const total = count * price;
     document.getElementById('total').innerText = `$${total}`;
 }
 
-function updateInventory() {
-    const count = document.getElementById('inventory_count').value;
-    const price = document.getElementById('product_price').value;
-    document.getElementById('current_Inventory').innerText = count;
-    document.getElementById('current_Price').innerText = price;
-    calculateTotal();
-}
+//this function will need to be done later to update to the database. i dont think it was actually doing anything
+// function updateInventory() {
+
+// }
+inventoryCount.addEventListener("input", calculateTotal);
+productPrice.addEventListener("input", calculateTotal);
 
 confirmButton.addEventListener('click', () => {
     alert("Successfully changed inventory")
+   // updateInventory();
     console.log('Confirm button clicked');
 });
 

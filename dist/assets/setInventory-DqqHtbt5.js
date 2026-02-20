@@ -1,1 +1,0 @@
-import"./style-CUByFO4V.js";const t=document.getElementById("confirmButton"),o=document.getElementById("homeButton");t.addEventListener("click",()=>{alert("Successfully changed inventory"),console.log("Confirm button clicked")});o.addEventListener("click",()=>{window.location.replace("./adminDashboard.html"),console.log("Home button clicked")});
