@@ -33,7 +33,7 @@ Part	|  *Description*
 
 🎚️ Mini Maestro 12 Channel USB Servo Controller  |  *Motor/servo control*
 
-⚙️ (MOTORS)	TBD
+⚙️ 25mm Diameter 6V 130RPM 1Kg.cm Brushed DC Gear Motor  |  *Motors x4*
 
 ### 🧑‍💻 Languages
 
