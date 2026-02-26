@@ -9,3 +9,5 @@ node_modules/
 
 # Allow tracking of dist directory
 !dist/
+
+data/
