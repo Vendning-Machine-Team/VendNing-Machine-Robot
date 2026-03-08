@@ -1,1 +1,4 @@
-add ur stuff here please - samuel
+flask
+flask-cors
+python-dotenv
+requests

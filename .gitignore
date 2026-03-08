@@ -2,7 +2,7 @@
 node_modules/
 
 # Ignore environmental variables
-.env
+*.env
 
 # Allow tracking of package.json
 !package.json
@@ -12,3 +12,6 @@ node_modules/
 
 #Database related files
 data/
+
+#ignore venv
+venv/
