@@ -2,6 +2,10 @@ const confirmButton = document.getElementById('confirmButton');
 const homeButton = document.getElementById('homeButton');
 const inventoryCount = document.getElementById('inventory_count');
 const productPrice = document.getElementById('product_price');
+const currentInventoryText = document.getElementById('currentInventory');
+const currentPriceText = document.getElementById('currentPrice');
+
+const username = localStorage.getItem('adminUsername');
 
 function calculateTotal() {
     const count = inventoryCount.value;

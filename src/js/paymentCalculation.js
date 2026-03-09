@@ -16,7 +16,16 @@ reportButton.addEventListener("click", () => {
     window.location.replace("./pages/reportIssue.html");
 });
 
-payButton.addEventListener("click", () => {
-    window.location.replace("./pages/paymentCode.html");
+payButton.addEventListener("click", async () => {
+
+    const response = await fetch("/api/create-test-payment", {
+        method: "POST"
+    });
+
+    const data = await response.json();
+
+    const sessionId = data.session_id;
+
+    window.location.replace(`./pages/paymentCode.html?session_id=${sessionId}`);
 });
 
