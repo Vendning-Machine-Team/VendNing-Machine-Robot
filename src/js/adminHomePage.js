@@ -1,5 +1,6 @@
 const setPathButton = document.getElementById('setPathButton');
 const setInventoryButton = document.getElementById('setInventoryButton');
+const viewActionsButton = document.getElementById('viewActionsButton');
 const logOutButton = document.getElementById('logOutButton');
 
 setPathButton.addEventListener('click', () => {
@@ -10,6 +11,11 @@ setPathButton.addEventListener('click', () => {
 setInventoryButton.addEventListener('click', () => {
     window.location.replace("./setInventory.html");
     console.log('Set Inventory button clicked');
+});
+
+viewActionsButton.addEventListener('click', () => {
+    window.location.replace("./viewActions.html");
+    console.log('View Actions button clicked');
 });
 
 logOutButton.addEventListener('click', async() => {

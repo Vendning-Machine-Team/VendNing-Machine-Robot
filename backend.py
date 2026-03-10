@@ -280,5 +280,24 @@ def update_inventory():
 
     return jsonify({"success": True})
 
+@app.route("/api/get-actions", methods=["GET"])
+def get_actions():
+    cursor.execute("""
+        SELECT a.action_time, a.username, type_name
+        FROM actions a
+        JOIN action_type AS at ON a.action_type_id = at.type_id
+        ORDER BY a.action_time DESC
+        LIMIT 20
+    """)
+    rows = cursor.fetchall()
+
+    return jsonify([
+        {
+            "action_time": r[0],
+            "username": r[1],
+            "type_name": r[2],
+        }
+        for r in rows
+    ])
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5001, debug=True)
