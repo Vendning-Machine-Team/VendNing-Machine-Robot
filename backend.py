@@ -63,6 +63,9 @@ def serve_static_files(path):
         # fallback to index.html for SPA routing
         return send_from_directory(app.static_folder, "index.html")
 
+
+
+
 # log in the administrators (works with adminLoginPage.js)
 @app.route("/api/admin-login", methods=["POST"])
 def admin_login():
@@ -128,29 +131,63 @@ def generate_session_id():
 
 #this generates a random code to store in database, so that we can provide users with their code after they pay
 @app.route("/api/create-test-payment", methods=["POST"])
+@app.route("/api/create-test-payment", methods=["POST"])
 def create_test_payment():
-    #gets rid of expired codes (after 24 hrs)
-    conn.execute(
-        """
+
+    data = request.get_json()
+    cart = data.get("items", {})
+
+    # delete expired codes
+    conn.execute("""
         DELETE FROM valid_codes
         WHERE created_at < datetime('now','-24 hours')
-        """
-    )
-    conn.commit()
-    
-    
+    """)
+
+    # check inventory first to make sure we have enough of said product
+    for product_id, qty in cart.items():
+        qty = int(qty)
+        if qty <= 0:
+            continue
+        cursor.execute(
+            "SELECT inventory FROM products WHERE product_id = ?",
+            (product_id,)
+        )
+        result = cursor.fetchone()
+        if result is None:
+            return jsonify({"error": "Product not found"}), 400
+        inventory = result[0]
+        if qty > inventory:
+            return jsonify({
+                "error": f"Not enough inventory for product {product_id}"
+            }), 400
+
+    # subtract inventory --also prevents race conditions if two users try to do things at same time
+    for product_id, qty in cart.items():
+        qty = int(qty)
+        if qty <= 0:
+            continue
+        cursor.execute("""
+            UPDATE products
+            SET inventory = inventory - ?
+            WHERE product_id = ?
+            AND inventory >= ?
+        """, (qty, product_id, qty))
+        if cursor.rowcount == 0:
+            conn.rollback()
+            return jsonify({
+                "error": "Item just sold out"
+            }), 400
+
+    # generate payment code (needs fixing when we do stripe stuff)
     while True:
         code = f"{random.randint(0,9999):04d}"
-        session_id = generate_session_id() #TODO: replace with actual Stripe session ID once Stripe is implemented
+        session_id = generate_session_id()
 
         try:
-            conn.execute(
-                """
+            conn.execute("""
                 INSERT INTO valid_codes (code, stripe_session_id)
                 VALUES (?, ?)
-                """,
-                (code, session_id)
-            )
+            """, (code, session_id))
             conn.commit()
 
             return jsonify({
@@ -181,7 +218,67 @@ def get_code():
         return jsonify({"error": "Code not found or expired"}), 404
 
     return jsonify({"code": result[0]})
-    
+
+#this is to get the products and display on the payment calculation (index.html) page
+@app.route("/api/products", methods=["GET"])
+def get_products_to_buy():
+    cursor.execute("SELECT product_id, name, price, inventory FROM products")
+    rows = cursor.fetchall()
+
+    return jsonify([
+        {"id": r[0], "name": r[1], "price": r[2], "inventory": r[3]}
+        for r in rows
+    ])
+
+#these are for the set inventory page
+#get all the products for the dropdown menu
+@app.route("/api/get-products", methods=["GET"])
+def get_products():
+    cursor.execute("SELECT product_id, name FROM products")
+    products = cursor.fetchall()
+
+    return jsonify([
+        {"id": row[0], "name": row[1]}
+        for row in products
+    ])
+
+#get the current price and inventory for the product (to display on the ui)
+@app.route("/api/get-inventory/<int:product_id>", methods=["GET"])
+def get_inventory(product_id):
+    cursor.execute(
+        "SELECT price, inventory FROM products WHERE product_id = ?",
+        (product_id,)
+    )
+    result = cursor.fetchone()
+
+    return jsonify({
+        "price": result[0],
+        "inventory": result[1]
+    })
+
+#update the inventory for when changes are made on the page
+@app.route("/api/update-inventory", methods=["POST"])
+def update_inventory():
+    data = request.get_json()
+
+    product_id = data.get("product_id")
+    new_price = data.get("price")
+    new_inventory = data.get("inventory")
+    username = data.get("username")
+    #the actual updating query
+    cursor.execute("""
+        UPDATE products
+        SET price = ?, inventory = ?
+        WHERE product_id = ?
+    """, (new_price, new_inventory, product_id))
+    #log which administrator did the change
+    cursor.execute("""
+        INSERT INTO actions (username, action_type_id)
+        VALUES (?, 1)
+    """, (username,))
+    conn.commit()
+
+    return jsonify({"success": True})
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5001, debug=True)
