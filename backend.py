@@ -12,11 +12,27 @@ webhook = os.getenv("DISCORD_WEBHOOK")
 conn = sqlite3.connect("data/vm.db",check_same_thread=False)
 cursor = conn.cursor()
 
+##############################################################
+#Note from Samuel: Ensure that bannedwords.py is in the same folder or else you'll have to change the destination as to where the import request is fulfilled.
+import bannedwords
 
+BANNED_WORDS = bannedwords.BANNED_WORDS
 def SEND_AUDIT_LOG(message,urgency): # Urgency can be "True" or "False", true for when pinging @eveyrone, false for normal messages
+    
+    BANNED_SET = set(word.lower() for word in BANNED_WORDS)
+
+    filtered_message = message.split()
+
+    for i, word in enumerate(filtered_message):
+        if word.lower() in BANNED_SET:
+            filtered_message[i] = "[BLEEP]"
+    
+    message = " ".join(filtered_message)
+    
     ret = "@everyone\n" if urgency else ""
     ret += message
 
+    
     message_data = {
         "content": ret,
     }
@@ -26,6 +42,8 @@ def SEND_AUDIT_LOG(message,urgency): # Urgency can be "True" or "False", true fo
         response.raise_for_status()
     except requests.RequestException as e:
         print(f"Error sending webhook: {e}")
+
+#####################################################3
 app = Flask(
     __name__,
     static_folder="./dist",
