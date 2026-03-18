@@ -13,10 +13,10 @@ conn = sqlite3.connect("data/vm.db",check_same_thread=False)
 cursor = conn.cursor()
 
 ##############################################################
-#Note from Samuel: Ensure that bannedwords.py is in the same folder or else you'll have to change the destination as to where the import request is fulfilled.
-import bannedwords
+#Note from Samuel: Ensure that banned_words.py is in the same folder or else you'll have to change the destination as to where the import request is fulfilled.
+import banned_words
 
-BANNED_WORDS = bannedwords.BANNED_WORDS
+BANNED_WORDS = banned_words.BANNED_WORDS
 def SEND_AUDIT_LOG(message,urgency): # Urgency can be "True" or "False", true for when pinging @eveyrone, false for normal messages
     
     BANNED_SET = set(word.lower() for word in BANNED_WORDS)
