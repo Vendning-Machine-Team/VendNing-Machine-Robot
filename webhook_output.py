@@ -6,10 +6,25 @@ load_dotenv()
 
 webhook = os.getenv("DISCORD_WEBHOOK")
 
+import bannedwords
+
+BANNED_WORDS = bannedwords.BANNED_WORDS
 def SEND_AUDIT_LOG(message,urgency): # Urgency can be "True" or "False", true for when pinging @eveyrone, false for normal messages
+    
+    BANNED_SET = set(word.lower() for word in BANNED_WORDS)
+
+    filtered_message = message.split()
+
+    for i, word in enumerate(filtered_message):
+        if word.lower() in BANNED_SET:
+            filtered_message[i] = "[BLEEP]"
+    
+    message = " ".join(filtered_message)
+    
     ret = "@everyone\n" if urgency else ""
     ret += message
 
+    
     message_data = {
         "content": ret,
     }
