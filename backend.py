@@ -149,7 +149,6 @@ def generate_session_id():
 
 #this generates a random code to store in database, so that we can provide users with their code after they pay
 @app.route("/api/create-test-payment", methods=["POST"])
-@app.route("/api/create-test-payment", methods=["POST"])
 def create_test_payment():
 
     data = request.get_json()
@@ -318,4 +317,4 @@ def get_actions():
         for r in rows
     ])
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5001, debug=True)
+    app.run(host="0.0.0.0", port=5001, debug=False)
