@@ -30,6 +30,7 @@ export default defineConfig({
         reportIssue: resolve(__dirname, 'pages/reportIssue.html'),
         setInventory: resolve(__dirname, 'pages/setInventory.html'),
         setPath: resolve(__dirname, 'pages/setPath.html'),
+        viewActions: resolve(__dirname, 'pages/viewActions.html'),
       }
     }
   }

@@ -154,12 +154,6 @@ def create_test_payment():
     data = request.get_json()
     cart = data.get("items", {})
 
-    # delete expired codes
-    conn.execute("""
-        DELETE FROM valid_codes
-        WHERE created_at < datetime('now','-24 hours')
-    """)
-
     # check inventory first to make sure we have enough of said product
     for product_id, qty in cart.items():
         qty = int(qty)
@@ -226,7 +220,7 @@ def get_code():
         SELECT code
         FROM valid_codes
         WHERE stripe_session_id = ?
-        AND created_at >= datetime('now','-24 hours')
+        AND created_at >= datetime('now','-1 day')
         """,
         (session_id,)
     ).fetchone()
